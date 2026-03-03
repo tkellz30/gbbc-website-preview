@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home — Grace Bible Baptist Church | Pensacola, FL</title>
+  <meta name="description" content="Grace Bible Baptist Church is a Bible-driven, Christ-centered church in Pensacola, FL. Join us Sundays at 9:45 AM and 10:45 AM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ── ANNOUNCEMENT BAR ─────────────────────────────────────────── -->
+<div class="announcement-bar" role="region" aria-label="Site announcement">
+  <span class="label">🏗 Building Update</span>
+  <p>We're building a new home for Grace on <strong>Fairfield Drive</strong> — exciting things ahead!</p>
+  <a class="ann-link" href="building-project.html">See the Update →</a>
+</div>
+
+<!-- ── HEADER ────────────────────────────────────────────────────── -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Grace Bible Baptist Church — Home">
+      <img src="assets/logo.png" alt="Grace Bible Baptist Church" width="160" height="52"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <span class="logo-fallback" style="display:none">
+        <span class="logo-icon" aria-hidden="true">✝</span>
+        <span class="logo-text">Grace Bible Baptist <small>Pensacola, FL</small></span>
+      </span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"            class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="plan-a-visit.html">Plan a Visit</a></li>
+        <li><a href="give.html">Give</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="building-project.html">Building Project</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-ctas">
+      <a class="btn btn-outline btn-sm nav-cta-secondary"
+         href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Watch live on Facebook">▶ Watch Live</a>
+      <a class="btn btn-primary btn-sm" href="plan-a-visit.html">Plan a Visit</a>
+    </div>
+
+    <button class="hamburger" id="hamburger-btn"
+            aria-label="Open navigation menu" aria-expanded="false"
+            onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ── MOBILE MENU ───────────────────────────────────────────────── -->
+<div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+  <ul role="list">
+    <li><a href="index.html"            class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="plan-a-visit.html">Plan a Visit</a></li>
+    <li><a href="give.html">Give</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="building-project.html">Building Project</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer">Sermons (Facebook Live)</a></li>
+  </ul>
+  <div class="mobile-menu-ctas">
+    <a class="btn btn-primary"  href="plan-a-visit.html" style="justify-content:center">Plan a Visit</a>
+    <a class="btn btn-outline"  href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+       target="_blank" rel="noopener noreferrer" style="justify-content:center">▶ Watch Live on Facebook</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <!-- ── HERO ─────────────────────────────────────────────────────── -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-slideshow" id="hero-slideshow" aria-hidden="true">
+      <div class="hero-slide active"></div><!-- congregation worship      -->
+      <div class="hero-slide"></div>        <!-- happy people singing      -->
+      <div class="hero-slide"></div>        <!-- welcoming greeter         -->
+      <div class="hero-slide"></div>        <!-- church building/exterior  -->
+      <div class="hero-slide"></div>        <!-- praying hands             -->
+      <!-- REPLACE each slide's background-image in css/styles.css
+           with your own photos from WordPress Media Library -->
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-overlay-accent" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge" aria-hidden="true">
+        <span class="dot"></span> Sundays in Pensacola, FL
+      </div>
+      <h1 id="hero-heading">A Place to <em>Belong,</em><br>Believe, and Grow.</h1>
+      <p class="hero-sub">
+        At Grace Bible Baptist Church you'll find real people, warm community, and the life-changing
+        truth of God's Word. You are welcome here — just as you are.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary btn-lg" href="plan-a-visit.html">Plan a Visit</a>
+        <a class="btn btn-outline-white btn-lg"
+           href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer">▶ Watch Live</a>
+      </div>
+
+      <!-- Service times strip -->
+      <div class="hero-times" role="list" aria-label="Weekly service schedule">
+        <div class="hero-time-item" role="listitem">
+          <div class="hero-time-label">Sunday School</div>
+          <div class="hero-time-value">9:45 AM</div>
+          <div class="hero-time-desc">Adults &amp; Children</div>
+        </div>
+        <div class="hero-time-divider" aria-hidden="true"></div>
+        <div class="hero-time-item" role="listitem">
+          <div class="hero-time-label">Worship Service</div>
+          <div class="hero-time-value">10:45 AM</div>
+          <div class="hero-time-desc">Come as you are</div>
+        </div>
+        <div class="hero-time-divider" aria-hidden="true"></div>
+        <div class="hero-time-item" role="listitem">
+          <div class="hero-time-label">Wed. Prayer</div>
+          <div class="hero-time-value">6:45 PM</div>
+          <div class="hero-time-desc">Wednesday evenings</div>
+        </div>
+        <div class="hero-time-divider" aria-hidden="true"></div>
+        <div class="hero-time-item" role="listitem">
+          <div class="hero-time-label">Location</div>
+          <div class="hero-time-value" style="font-size:15px">7201 Klondike Rd</div>
+          <div class="hero-time-desc">White building in the back</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slideshow-dots" id="slideshow-dots"
+         role="group" aria-label="Slideshow navigation"></div>
+  </section>
+
+  <!-- ── QUICK ACTIONS ─────────────────────────────────────────────── -->
+  <nav class="quick-actions" aria-label="Quick actions">
+    <div class="quick-actions-inner" role="list">
+      <a class="qa-btn" href="plan-a-visit.html" role="listitem">
+        <span class="qa-icon" aria-hidden="true">📍</span>Plan a Visit
+      </a>
+      <a class="qa-btn" href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+         target="_blank" rel="noopener noreferrer" role="listitem">
+        <span class="qa-icon" aria-hidden="true">▶</span>Watch Live
+      </a>
+      <a class="qa-btn" href="https://gbbcpensacola.churchtrac.com/card/4"
+         target="_blank" rel="noopener noreferrer" role="listitem">
+        <span class="qa-icon" aria-hidden="true">✉</span>Connection Card
+      </a>
+      <a class="qa-btn" href="https://gbbcpensacola.churchtrac.com/give"
+         target="_blank" rel="noopener noreferrer" role="listitem">
+        <span class="qa-icon" aria-hidden="true">🤲</span>Give Online
+      </a>
+    </div>
+  </nav>
+
+  <!-- ── SERVICE TIMES ─────────────────────────────────────────────── -->
+  <section class="service-times-section section-sm" aria-labelledby="times-heading">
+    <div class="container">
+      <div class="text-center" style="max-width:600px;margin:0 auto var(--space-4)">
+        <span class="eyebrow">Every Week in Pensacola</span>
+        <h2 id="times-heading" class="section-heading">Join Us</h2>
+        <p class="section-sub">All are welcome — come as you are.</p>
+      </div>
+      <div class="service-times-grid">
+        <article class="time-card">
+          <div class="time-icon" aria-hidden="true">📖</div>
+          <h3>9:45 AM</h3>
+          <strong>Adult Sunday School</strong>
+          <p>Sundays — Deeper study of God's Word alongside fellow believers.</p>
+        </article>
+        <article class="time-card">
+          <div class="time-icon" aria-hidden="true">🧒</div>
+          <h3>9:45 AM</h3>
+          <strong>Children's Sunday School</strong>
+          <p>Sundays — Fun, age-appropriate Bible lessons for children.</p>
+        </article>
+        <article class="time-card">
+          <div class="time-icon" aria-hidden="true">🎵</div>
+          <h3>10:45 AM</h3>
+          <strong>Morning Worship Service</strong>
+          <p>Sundays — Praise, prayer, and the preaching of God's Word.</p>
+        </article>
+        <article class="time-card wednesday">
+          <div class="time-icon" aria-hidden="true">🙏</div>
+          <h3>6:45 PM</h3>
+          <strong>Prayer Service</strong>
+          <p>Wednesdays — Come pray and study Scripture together mid-week.</p>
+        </article>
+      </div>
+      <div class="directions-row">
+        <p>📍 <strong>7201 Klondike Rd, Pensacola FL 32526</strong> — White building in the back</p>
+        <button class="btn-directions"
+                onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526')"
+                aria-label="Get directions to 7201 Klondike Road">
+          🗺 Directions to Klondike Rd
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PLAN A VISIT PREVIEW ──────────────────────────────────────── -->
+  <section class="visit-section section" aria-labelledby="visit-home-heading">
+    <div class="container">
+      <div class="visit-grid">
+        <div class="visit-img-wrap">
+          <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=80"
+               alt="Warm welcome at Grace Bible Baptist Church"
+               loading="lazy" width="800" height="500">
+          <!-- REPLACE with your own building/greeter photo -->
+          <div class="visit-img-badge" aria-hidden="true">
+            📍 7201 Klondike Rd — White building in the back
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">First Time?</span>
+          <h2 id="visit-home-heading" class="section-heading">You're Going to Love It Here</h2>
+          <p class="section-sub">
+            We know visiting a new church can feel like a big step. Here's what to expect —
+            no surprises, just a warm welcome.
+          </p>
+          <div class="visit-steps">
+            <div class="visit-step">
+              <span class="step-num" aria-hidden="true">1</span>
+              <div class="step-body">
+                <strong>Park &amp; Be Greeted</strong>
+                <p>Our greeters meet you from the parking lot. Look for the white building in the back at 7201 Klondike Rd.</p>
+              </div>
+            </div>
+            <div class="visit-step">
+              <span class="step-num" aria-hidden="true">2</span>
+              <div class="step-body">
+                <strong>Bring the Kids</strong>
+                <p>Children's Sunday School runs at 9:45 AM — safe, caring, and Scripture-centered.</p>
+              </div>
+            </div>
+            <div class="visit-step">
+              <span class="step-num" aria-hidden="true">3</span>
+              <div class="step-body">
+                <strong>Enjoy the Worship Service</strong>
+                <p>At 10:45 AM, join us for praise, prayer, and preaching grounded in God's Word.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-row">
+            <a class="btn btn-primary" href="plan-a-visit.html">Plan My Visit →</a>
+            <button class="btn-directions"
+                    onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526')">
+              🗺 Get Directions
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WATCH LIVE ────────────────────────────────────────────────── -->
+  <section class="watch-section section" aria-labelledby="watch-heading">
+    <div class="container">
+      <div class="watch-grid">
+        <div>
+          <span class="eyebrow">Online &amp; On-Demand</span>
+          <h2 id="watch-heading" class="section-heading">Watch From Anywhere</h2>
+          <p style="font-size:var(--text-md);color:rgba(255,255,255,0.72);line-height:var(--leading-loose);max-width:440px;margin-bottom:var(--space-8);">
+            Can't make it in person? We stream our Worship Service live on Facebook every Sunday morning.
+            All are welcome to join online.
+          </p>
+          <a class="btn btn-gold btn-lg"
+             href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+             target="_blank" rel="noopener noreferrer">▶ Watch on Facebook</a>
+          <div class="watch-sub-links">
+            <a href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+               target="_blank" rel="noopener noreferrer">👍 Follow on Facebook →</a>
+          </div>
+        </div>
+        <div class="fb-embed-card">
+          <a class="fb-embed-thumb"
+             href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Watch Grace Bible Baptist Church live on Facebook">
+            <div class="fb-thumb-bg" aria-hidden="true"></div>
+            <div class="fb-play" aria-hidden="true">▶</div>
+          </a>
+          <div class="fb-embed-footer">
+            <p>Live every Sunday · 10:45 AM<br>
+               <strong style="color:rgba(255,255,255,0.8)">Grace Bible Baptist Church</strong></p>
+            <a class="btn btn-outline-white btn-sm"
+               href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+               target="_blank" rel="noopener noreferrer">Watch Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BUILDING PROJECT CARD ─────────────────────────────────────── -->
+  <section class="building-section section-sm">
+    <div class="container">
+      <div class="building-card">
+        <div>
+          <div class="building-badge">🏗 Building Project Update</div>
+          <h2 class="section-heading" style="font-size:clamp(22px,3vw,34px);margin-bottom:0">
+            We're Building a New Home on Fairfield Drive
+          </h2>
+          <hr class="divider">
+          <p style="font-size:var(--text-md);color:var(--color-text-secondary);line-height:var(--leading-loose);max-width:560px">
+            God has opened an exciting new chapter for Grace Bible Baptist Church. We're in the middle
+            of a building project on <strong>Fairfield Drive</strong>, and we're grateful for every
+            prayer and gift making it possible.
+          </p>
+          <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-3)">
+            <em>We continue to meet at 7201 Klondike Rd (white building in the back).</em>
+          </p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);align-items:flex-start">
+          <a class="btn btn-primary" href="building-project.html">See the Full Update →</a>
+          <a class="btn btn-outline" href="https://gbbcpensacola.churchtrac.com/give"
+             target="_blank" rel="noopener noreferrer">Give to the Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GIVE STRIP ────────────────────────────────────────────────── -->
+  <section class="give-section section" aria-labelledby="give-home-heading">
+    <div class="container">
+      <div class="give-inner">
+        <div class="give-text">
+          <h2 id="give-home-heading">Generosity Builds the Kingdom</h2>
+          <p>Your faithful giving supports the ministry, the mission, and the new building on
+             Fairfield Drive. Every gift matters.</p>
+        </div>
+        <div class="give-ctas">
+          <a class="btn btn-gold btn-lg"
+             href="https://gbbcpensacola.churchtrac.com/give"
+             target="_blank" rel="noopener noreferrer">Give Online →</a>
+          <a class="btn btn-outline-white" href="give.html">Learn About Giving</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ────────────────────────────────────────────────────── -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Grace Bible Baptist Church</h3>
+        <p>A Bible-driven, Christ-centered church in Pensacola, FL — where lives are changed by
+           the Word of God. All are welcome.</p>
+        <address class="footer-address">
+          <strong>7201 Klondike Rd</strong><br>
+          Pensacola, FL 32526<br>
+          (White building in the back)<br><br>
+          <a href="tel:+18504343440">(850) 434-3440</a><br>
+          <a href="mailto:info@gbbcpensacola.org">info@gbbcpensacola.org</a>
+        </address>
+        <div class="social-links">
+          <a class="social-link"
+             href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+             target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">f</a>
+          <a class="social-link"
+             href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+             target="_blank" rel="noopener noreferrer" aria-label="Watch live on Facebook">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+                 target="_blank" rel="noopener noreferrer">▶ Watch Live</a></li>
+          <li><a href="plan-a-visit.html">Plan a Visit</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="building-project.html">Building Project</a></li>
+          <li><a href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+                 target="_blank" rel="noopener noreferrer">Sermons (Facebook)</a></li>
+          <li><a href="https://gbbcpensacola.churchtrac.com/card/4"
+                 target="_blank" rel="noopener noreferrer">Connection Card</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Worship Times</h4>
+        <ul>
+          <li><a href="plan-a-visit.html">Sunday School · 9:45 AM</a></li>
+          <li><a href="plan-a-visit.html">Worship Service · 10:45 AM</a></li>
+          <li><a href="plan-a-visit.html">Wed Prayer · 6:45 PM</a></li>
+          <li><a href="#" onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526');return false">
+            🗺 Directions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://gbbcpensacola.churchtrac.com/card/4"
+                 target="_blank" rel="noopener noreferrer">Connection Card</a></li>
+          <li><a href="https://gbbcpensacola.churchtrac.com/give"
+                 target="_blank" rel="noopener noreferrer">Give Online</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://gbbcpensacola.churchtrac.com"
+                 target="_blank" rel="noopener noreferrer"
+                 style="opacity:.5;font-size:11px">Member Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div style="background:rgba(0,0,0,0.2)">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Grace Bible Baptist Church · Pensacola, FL</span>
+        <span>Soli Deo Gloria.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Grace Bible Baptist Church | Pensacola, FL</title>
+  <meta name="description" content="Learn about Grace Bible Baptist Church in Pensacola, FL — our mission, beliefs, and community.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="announcement-bar" role="region" aria-label="Site announcement">
+  <span class="label">🏗 Building Update</span>
+  <p>We're building a new home for Grace on <strong>Fairfield Drive</strong> — exciting things ahead!</p>
+  <a class="ann-link" href="building-project.html">See the Update →</a>
+</div>
+
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Grace Bible Baptist Church — Home">
+      <img src="assets/logo.png" alt="Grace Bible Baptist Church" width="160" height="52"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <span class="logo-fallback" style="display:none">
+        <span class="logo-icon" aria-hidden="true">✝</span>
+        <span class="logo-text">Grace Bible Baptist <small>Pensacola, FL</small></span>
+      </span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="plan-a-visit.html">Plan a Visit</a></li>
+        <li><a href="give.html">Give</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="building-project.html">Building Project</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-ctas">
+      <a class="btn btn-outline btn-sm nav-cta-secondary"
+         href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+         target="_blank" rel="noopener noreferrer">▶ Watch Live</a>
+      <a class="btn btn-primary btn-sm" href="plan-a-visit.html">Plan a Visit</a>
+    </div>
+    <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu"
+            aria-expanded="false" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+  <ul role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="plan-a-visit.html">Plan a Visit</a></li>
+    <li><a href="give.html">Give</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="building-project.html">Building Project</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer">Sermons (Facebook Live)</a></li>
+  </ul>
+  <div class="mobile-menu-ctas">
+    <a class="btn btn-primary" href="plan-a-visit.html" style="justify-content:center">Plan a Visit</a>
+    <a class="btn btn-outline" href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+       target="_blank" rel="noopener noreferrer" style="justify-content:center">▶ Watch Live</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <!-- ── ABOUT HERO ────────────────────────────────────────────────── -->
+  <div class="about-hero">
+    <div class="about-hero-content">
+      <span class="eyebrow" style="color:var(--color-gold-light)">Who We Are</span>
+      <h1>Grace Bible Baptist<br><em>Church</em></h1>
+      <p>Bible-driven, Christ-centered, and rooted in Pensacola, FL.
+         A community of real people growing in God's grace.</p>
+    </div>
+  </div>
+
+  <!-- ── WELCOME ───────────────────────────────────────────────────── -->
+  <section class="section" style="background:var(--color-bg-white)" aria-labelledby="welcome-heading">
+    <div class="container">
+      <div style="max-width:760px">
+        <span class="eyebrow">Welcome</span>
+        <h2 id="welcome-heading" class="section-heading">You Belong Here</h2>
+
+        <!-- Verbatim welcome copy -->
+        <div class="prose">
+          <p>We're so glad you're here — whether you're exploring faith or growing deeper in your
+             walk with God. Grace is a Bible-driven, Christ-centered church where lives are being
+             changed by God's Word. We're excited about our new church building and the fresh season
+             of growth and fellowship God has prepared. You'll find a welcoming, joyful community of
+             real people who love God, love others, and want to grow together. Wherever you are on
+             your spiritual journey — you belong here.</p>
+        </div>
+
+        <div class="pull-quote" style="margin:var(--space-10) 0">
+          <p>"Amazing grace, how sweet the sound, that saved a wretch like me.
+              I once was lost, but now am found; was blind, but now I see."</p>
+          <cite>— John Newton</cite>
+        </div>
+
+        <div class="prose">
+          <p>Grace Bible Baptist Church is located at <strong>7201 Klondike Rd, Pensacola, FL 32526</strong>
+             — the white building in the back. We meet every Sunday and Wednesday and would love
+             to have you join us.</p>
+        </div>
+
+        <div class="flex-row mt-8">
+          <a class="btn btn-primary" href="plan-a-visit.html">Plan a Visit →</a>
+          <button class="btn-directions"
+                  onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526')">
+            🗺 Get Directions
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MISSION & BELIEFS ─────────────────────────────────────────── -->
+  <section class="beliefs-section section" aria-labelledby="beliefs-heading">
+    <div class="container">
+      <div style="max-width:760px;margin:0 auto">
+        <span class="eyebrow">What We Believe</span>
+        <h2 id="beliefs-heading" class="section-heading">Mission &amp; Beliefs</h2>
+        <p class="section-sub" style="margin-bottom:var(--space-2)">
+          Grace Bible Baptist Church is committed to the authority of Scripture and
+          the centrality of Jesus Christ in all things.
+        </p>
+
+        <div class="accordion" role="list">
+
+          <div class="accordion-item" role="listitem">
+            <button class="accordion-trigger"
+                    aria-expanded="false"
+                    aria-controls="belief-scriptures"
+                    onclick="toggleAccordion(this)">
+              The Holy Scriptures
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body" id="belief-scriptures" role="region">
+              <div class="accordion-body-inner">
+                We believe the Old and New Testaments to be verbally inspired by God, inerrant in
+                the original writings, and that they are of supreme and final authority in faith
+                and life.
+                <cite>II Timothy 3:16–17; II Peter 1:19–21</cite>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" role="listitem">
+            <button class="accordion-trigger"
+                    aria-expanded="false"
+                    aria-controls="belief-godhead"
+                    onclick="toggleAccordion(this)">
+              The Godhead — The Trinity
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body" id="belief-godhead" role="region">
+              <div class="accordion-body-inner">
+                We believe the Godhead eternally exists in three persons: Father, Son, and Holy
+                Spirit. These three are one God, having precisely the same nature, attributes, and
+                perfections.
+                <cite>Genesis 1:1, 1:26; Matthew 13:14; Romans 8:9</cite>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" role="listitem">
+            <button class="accordion-trigger"
+                    aria-expanded="false"
+                    aria-controls="belief-christ"
+                    onclick="toggleAccordion(this)">
+              The Lord Jesus Christ
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body" id="belief-christ" role="region">
+              <div class="accordion-body-inner">
+                <em style="color:var(--color-text-muted)">[Full statement of belief coming soon. Please
+                contact us or speak with our pastor for more information.]</em>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /accordion -->
+
+        <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-6)">
+          For our full statement of faith, please
+          <a href="contact.html" style="color:var(--color-maroon);font-weight:600">contact us</a>
+          or speak with our pastor.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICE TIMES ─────────────────────────────────────────────── -->
+  <section class="service-times-section section-sm" aria-labelledby="about-times-heading">
+    <div class="container">
+      <div class="text-center" style="max-width:600px;margin:0 auto var(--space-4)">
+        <span class="eyebrow">Weekly Schedule</span>
+        <h2 id="about-times-heading" class="section-heading">Come Worship With Us</h2>
+      </div>
+      <div class="service-times-grid">
+        <article class="time-card">
+          <div class="time-icon">📖</div>
+          <h3>9:45 AM</h3><strong>Adult Sunday School</strong><p>Sundays</p>
+        </article>
+        <article class="time-card">
+          <div class="time-icon">🧒</div>
+          <h3>9:45 AM</h3><strong>Children's Sunday School</strong><p>Sundays</p>
+        </article>
+        <article class="time-card">
+          <div class="time-icon">🎵</div>
+          <h3>10:45 AM</h3><strong>Morning Worship Service</strong><p>Sundays</p>
+        </article>
+        <article class="time-card wednesday">
+          <div class="time-icon">🙏</div>
+          <h3>6:45 PM</h3><strong>Prayer Service</strong><p>Wednesdays</p>
+        </article>
+      </div>
+      <div class="directions-row">
+        <p>📍 <strong>7201 Klondike Rd, Pensacola FL 32526</strong> — White building in the back</p>
+        <button class="btn-directions"
+                onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526')">
+          🗺 Directions
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ────────────────────────────────────────────────────── -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Grace Bible Baptist Church</h3>
+        <p>A Bible-driven, Christ-centered church in Pensacola, FL.</p>
+        <address class="footer-address">
+          <strong>7201 Klondike Rd</strong><br>Pensacola, FL 32526<br>
+          (White building in the back)<br><br>
+          <a href="tel:+18504343440">(850) 434-3440</a><br>
+          <a href="mailto:info@gbbcpensacola.org">info@gbbcpensacola.org</a>
+        </address>
+        <div class="social-links">
+          <a class="social-link" href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+             target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+                 target="_blank" rel="noopener noreferrer">▶ Watch Live</a></li>
+          <li><a href="plan-a-visit.html">Plan a Visit</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="building-project.html">Building Project</a></li>
+          <li><a href="https://gbbcpensacola.churchtrac.com/card/4"
+                 target="_blank" rel="noopener noreferrer">Connection Card</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Worship Times</h4>
+        <ul>
+          <li><a href="plan-a-visit.html">Sunday School · 9:45 AM</a></li>
+          <li><a href="plan-a-visit.html">Worship · 10:45 AM</a></li>
+          <li><a href="plan-a-visit.html">Wed Prayer · 6:45 PM</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://gbbcpensacola.churchtrac.com/give"
+                 target="_blank" rel="noopener noreferrer">Give Online</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div style="background:rgba(0,0,0,0.2)">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Grace Bible Baptist Church · Pensacola, FL</span>
+        <span>Soli Deo Gloria.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -6,33 +6,33 @@
   <title>Home — Grace Bible Baptist Church | Pensacola, FL</title>
   <meta name="description" content="Grace Bible Baptist Church is a Bible-driven, Christ-centered church in Pensacola, FL. Join us Sundays at 9:45 AM and 10:45 AM.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<!-- ── ANNOUNCEMENT BAR ─────────────────────────────────────────── -->
+<!-- ANNOUNCEMENT BAR — [CHANGE 4] emoji removed -->
 <div class="announcement-bar" role="region" aria-label="Site announcement">
-  <span class="label">🏗 Building Update</span>
+  <span class="label">Building Update</span>
   <p>We're building a new home for Grace on <strong>Fairfield Drive</strong> — exciting things ahead!</p>
-  <a class="ann-link" href="building-project.html">See the Update →</a>
+  <a class="ann-link" href="building-project.html">See the Update &rarr;</a>
 </div>
 
-<!-- ── HEADER ────────────────────────────────────────────────────── -->
+<!-- HEADER — [CHANGE 1] bigger logo; [CHANGE 4] no emojis; [CHANGE 5] Watch Live solid, Plan a Visit removed -->
 <header class="site-header" role="banner">
   <div class="header-inner">
     <a class="logo" href="index.html" aria-label="Grace Bible Baptist Church — Home">
-      <img src="assets/logo.png" alt="Grace Bible Baptist Church" width="160" height="52"
+      <img src="assets/logo.png" alt="Grace Bible Baptist Church" width="200" height="64"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <span class="logo-fallback" style="display:none">
-        <span class="logo-icon" aria-hidden="true">✝</span>
+        <span class="logo-icon" aria-hidden="true">&#10013;</span>
         <span class="logo-text">Grace Bible Baptist <small>Pensacola, FL</small></span>
       </span>
     </a>
 
     <nav aria-label="Main navigation">
       <ul class="nav-links" role="list">
-        <li><a href="index.html"            class="active">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="plan-a-visit.html">Plan a Visit</a></li>
         <li><a href="give.html">Give</a></li>
@@ -42,12 +42,11 @@
       </ul>
     </nav>
 
+    <!-- [CHANGE 5] Watch Live is now btn-primary (solid maroon); Plan a Visit button removed -->
     <div class="nav-ctas">
-      <a class="btn btn-outline btn-sm nav-cta-secondary"
+      <a class="btn btn-primary btn-sm"
          href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
-         target="_blank" rel="noopener noreferrer"
-         aria-label="Watch live on Facebook">▶ Watch Live</a>
-      <a class="btn btn-primary btn-sm" href="plan-a-visit.html">Plan a Visit</a>
+         target="_blank" rel="noopener noreferrer">Watch Live</a>
     </div>
 
     <button class="hamburger" id="hamburger-btn"
@@ -58,10 +57,10 @@
   </div>
 </header>
 
-<!-- ── MOBILE MENU ───────────────────────────────────────────────── -->
+<!-- MOBILE MENU — [CHANGE 4] no emojis -->
 <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
   <ul role="list">
-    <li><a href="index.html"            class="active">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="plan-a-visit.html">Plan a Visit</a></li>
     <li><a href="give.html">Give</a></li>
@@ -69,27 +68,25 @@
     <li><a href="building-project.html">Building Project</a></li>
     <li><a href="contact.html">Contact</a></li>
     <li><a href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
-           target="_blank" rel="noopener noreferrer">Sermons (Facebook Live)</a></li>
+           target="_blank" rel="noopener noreferrer">Sermons (Facebook)</a></li>
   </ul>
   <div class="mobile-menu-ctas">
-    <a class="btn btn-primary"  href="plan-a-visit.html" style="justify-content:center">Plan a Visit</a>
-    <a class="btn btn-outline"  href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
-       target="_blank" rel="noopener noreferrer" style="justify-content:center">▶ Watch Live on Facebook</a>
+    <a class="btn btn-primary" href="plan-a-visit.html" style="justify-content:center">Plan a Visit</a>
+    <a class="btn btn-outline" href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+       target="_blank" rel="noopener noreferrer" style="justify-content:center">Watch Live on Facebook</a>
   </div>
 </div>
 
 <main id="main-content">
 
-  <!-- ── HERO ─────────────────────────────────────────────────────── -->
+  <!-- HERO — [CHANGE 2] shorter height; [CHANGE 3] improved times typography; [CHANGE 4] no emojis -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero-slideshow" id="hero-slideshow" aria-hidden="true">
-      <div class="hero-slide active"></div><!-- congregation worship      -->
-      <div class="hero-slide"></div>        <!-- happy people singing      -->
-      <div class="hero-slide"></div>        <!-- welcoming greeter         -->
-      <div class="hero-slide"></div>        <!-- church building/exterior  -->
-      <div class="hero-slide"></div>        <!-- praying hands             -->
-      <!-- REPLACE each slide's background-image in css/styles.css
-           with your own photos from WordPress Media Library -->
+      <div class="hero-slide active"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-overlay-accent" aria-hidden="true"></div>
@@ -100,17 +97,17 @@
       </div>
       <h1 id="hero-heading">A Place to <em>Belong,</em><br>Believe, and Grow.</h1>
       <p class="hero-sub">
-        At Grace Bible Baptist Church you'll find real people, warm community, and the life-changing
-        truth of God's Word. You are welcome here — just as you are.
+        At Grace Bible Baptist Church you'll find real people, warm community, and the
+        life-changing truth of God's Word. You are welcome here — just as you are.
       </p>
       <div class="hero-ctas">
         <a class="btn btn-primary btn-lg" href="plan-a-visit.html">Plan a Visit</a>
         <a class="btn btn-outline-white btn-lg"
            href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
-           target="_blank" rel="noopener noreferrer">▶ Watch Live</a>
+           target="_blank" rel="noopener noreferrer">Watch Live</a>
       </div>
 
-      <!-- Service times strip -->
+      <!-- [CHANGE 3] Improved label / value / subtext hierarchy; [CHANGE 4] no emojis -->
       <div class="hero-times" role="list" aria-label="Weekly service schedule">
         <div class="hero-time-item" role="listitem">
           <div class="hero-time-label">Sunday School</div>
@@ -142,28 +139,40 @@
          role="group" aria-label="Slideshow navigation"></div>
   </section>
 
-  <!-- ── QUICK ACTIONS ─────────────────────────────────────────────── -->
+  <!-- QUICK ACTIONS — [CHANGE 4] SVG icons replace emojis -->
   <nav class="quick-actions" aria-label="Quick actions">
     <div class="quick-actions-inner" role="list">
       <a class="qa-btn" href="plan-a-visit.html" role="listitem">
-        <span class="qa-icon" aria-hidden="true">📍</span>Plan a Visit
+        <span class="qa-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </span>
+        Plan a Visit
       </a>
       <a class="qa-btn" href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
          target="_blank" rel="noopener noreferrer" role="listitem">
-        <span class="qa-icon" aria-hidden="true">▶</span>Watch Live
+        <span class="qa-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+        </span>
+        Watch Live
       </a>
       <a class="qa-btn" href="https://gbbcpensacola.churchtrac.com/card/4"
          target="_blank" rel="noopener noreferrer" role="listitem">
-        <span class="qa-icon" aria-hidden="true">✉</span>Connection Card
+        <span class="qa-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </span>
+        Connection Card
       </a>
       <a class="qa-btn" href="https://gbbcpensacola.churchtrac.com/give"
          target="_blank" rel="noopener noreferrer" role="listitem">
-        <span class="qa-icon" aria-hidden="true">🤲</span>Give Online
+        <span class="qa-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </span>
+        Give Online
       </a>
     </div>
   </nav>
 
-  <!-- ── SERVICE TIMES ─────────────────────────────────────────────── -->
+  <!-- SERVICE TIMES — [CHANGE 4] text abbreviation icons replace emojis -->
   <section class="service-times-section section-sm" aria-labelledby="times-heading">
     <div class="container">
       <div class="text-center" style="max-width:600px;margin:0 auto var(--space-4)">
@@ -173,54 +182,72 @@
       </div>
       <div class="service-times-grid">
         <article class="time-card">
-          <div class="time-icon" aria-hidden="true">📖</div>
+          <div class="time-icon" aria-hidden="true">SS</div>
           <h3>9:45 AM</h3>
           <strong>Adult Sunday School</strong>
           <p>Sundays — Deeper study of God's Word alongside fellow believers.</p>
         </article>
         <article class="time-card">
-          <div class="time-icon" aria-hidden="true">🧒</div>
+          <div class="time-icon" aria-hidden="true">KS</div>
           <h3>9:45 AM</h3>
           <strong>Children's Sunday School</strong>
           <p>Sundays — Fun, age-appropriate Bible lessons for children.</p>
         </article>
         <article class="time-card">
-          <div class="time-icon" aria-hidden="true">🎵</div>
+          <div class="time-icon" aria-hidden="true">WS</div>
           <h3>10:45 AM</h3>
           <strong>Morning Worship Service</strong>
           <p>Sundays — Praise, prayer, and the preaching of God's Word.</p>
         </article>
         <article class="time-card wednesday">
-          <div class="time-icon" aria-hidden="true">🙏</div>
+          <div class="time-icon" aria-hidden="true">WP</div>
           <h3>6:45 PM</h3>
           <strong>Prayer Service</strong>
           <p>Wednesdays — Come pray and study Scripture together mid-week.</p>
         </article>
       </div>
+      <!-- [CHANGE 4] no emojis in directions row -->
       <div class="directions-row">
-        <p>📍 <strong>7201 Klondike Rd, Pensacola FL 32526</strong> — White building in the back</p>
+        <p><strong>7201 Klondike Rd, Pensacola FL 32526</strong> &mdash; White building in the back</p>
         <button class="btn-directions"
                 onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526')"
                 aria-label="Get directions to 7201 Klondike Road">
-          🗺 Directions to Klondike Rd
+          Get Directions
         </button>
       </div>
     </div>
   </section>
 
-  <!-- ── PLAN A VISIT PREVIEW ──────────────────────────────────────── -->
+  <!-- PLAN A VISIT PREVIEW — [CHANGE 7] left side replaced with embedded map -->
   <section class="visit-section section" aria-labelledby="visit-home-heading">
     <div class="container">
       <div class="visit-grid">
-        <div class="visit-img-wrap">
-          <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=80"
-               alt="Warm welcome at Grace Bible Baptist Church"
-               loading="lazy" width="800" height="500">
-          <!-- REPLACE with your own building/greeter photo -->
-          <div class="visit-img-badge" aria-hidden="true">
-            📍 7201 Klondike Rd — White building in the back
+
+        <!-- [CHANGE 7] Clickable Google Maps embed; triggers smart OS directions on button click -->
+        <div class="visit-map-wrap">
+          <div class="visit-map-embed">
+            <iframe
+              src="https://maps.google.com/maps?q=7201+Klondike+Rd,+Pensacola,+FL+32526&output=embed&z=15"
+              title="Map of 7201 Klondike Rd, Pensacola FL 32526"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Interactive map showing our location at 7201 Klondike Rd, Pensacola"></iframe>
+          </div>
+          <div class="visit-map-footer">
+            <div class="visit-map-address">
+              <strong>7201 Klondike Rd, Pensacola FL 32526</strong>
+              <span>White building in the back</span>
+            </div>
+            <!-- Smart directions: iOS → Apple Maps, else → Google Maps -->
+            <button class="btn-directions"
+                    onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526')"
+                    aria-label="Open directions to 7201 Klondike Rd in your maps app">
+              Get Directions
+            </button>
           </div>
         </div>
+
         <div>
           <span class="eyebrow">First Time?</span>
           <h2 id="visit-home-heading" class="section-heading">You're Going to Love It Here</h2>
@@ -252,18 +279,14 @@
             </div>
           </div>
           <div class="flex-row">
-            <a class="btn btn-primary" href="plan-a-visit.html">Plan My Visit →</a>
-            <button class="btn-directions"
-                    onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526')">
-              🗺 Get Directions
-            </button>
+            <a class="btn btn-primary" href="plan-a-visit.html">Plan My Visit &rarr;</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── WATCH LIVE ────────────────────────────────────────────────── -->
+  <!-- WATCH LIVE — [CHANGE 4] no emojis -->
   <section class="watch-section section" aria-labelledby="watch-heading">
     <div class="container">
       <div class="watch-grid">
@@ -271,15 +294,15 @@
           <span class="eyebrow">Online &amp; On-Demand</span>
           <h2 id="watch-heading" class="section-heading">Watch From Anywhere</h2>
           <p style="font-size:var(--text-md);color:rgba(255,255,255,0.72);line-height:var(--leading-loose);max-width:440px;margin-bottom:var(--space-8);">
-            Can't make it in person? We stream our Worship Service live on Facebook every Sunday morning.
-            All are welcome to join online.
+            Can't make it in person? We stream our Worship Service live on Facebook every
+            Sunday morning. All are welcome to join online.
           </p>
           <a class="btn btn-gold btn-lg"
              href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
-             target="_blank" rel="noopener noreferrer">▶ Watch on Facebook</a>
+             target="_blank" rel="noopener noreferrer">Watch on Facebook</a>
           <div class="watch-sub-links">
             <a href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
-               target="_blank" rel="noopener noreferrer">👍 Follow on Facebook →</a>
+               target="_blank" rel="noopener noreferrer">Follow on Facebook &rarr;</a>
           </div>
         </div>
         <div class="fb-embed-card">
@@ -288,10 +311,13 @@
              target="_blank" rel="noopener noreferrer"
              aria-label="Watch Grace Bible Baptist Church live on Facebook">
             <div class="fb-thumb-bg" aria-hidden="true"></div>
-            <div class="fb-play" aria-hidden="true">▶</div>
+            <div class="fb-play" aria-hidden="true">
+              <!-- SVG play icon — no emoji -->
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
           </a>
           <div class="fb-embed-footer">
-            <p>Live every Sunday · 10:45 AM<br>
+            <p>Live every Sunday &middot; 10:45 AM<br>
                <strong style="color:rgba(255,255,255,0.8)">Grace Bible Baptist Church</strong></p>
             <a class="btn btn-outline-white btn-sm"
                href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
@@ -302,27 +328,199 @@
     </div>
   </section>
 
-  <!-- ── BUILDING PROJECT CARD ─────────────────────────────────────── -->
+  <!-- =========================================================
+       [CHANGE 6] PAST SERMONS — new section after Watch Live
+       Replace each Facebook URL with the actual video link.
+       ========================================================= -->
+  <section class="sermons-section section" aria-labelledby="sermons-heading">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:var(--space-5);margin-bottom:var(--space-4)">
+        <div>
+          <span class="eyebrow">From the Pulpit</span>
+          <h2 id="sermons-heading" class="section-heading" style="margin-bottom:0">Past Sermons</h2>
+        </div>
+        <a class="btn btn-outline"
+           href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer">All Sermons on Facebook &rarr;</a>
+      </div>
+
+      <div class="sermon-grid">
+
+        <!-- Sermon 1 — REPLACE href with real Facebook video URL -->
+        <a class="sermon-card"
+           href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch: The God Who Sees">
+          <div class="sermon-thumb">
+            <div class="sermon-thumb-bg"></div>
+            <div class="sermon-play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </div>
+          <div class="sermon-body">
+            <div class="sermon-series">Sunday Morning</div>
+            <div class="sermon-title">The God Who Sees</div>
+            <div class="sermon-desc">A message on Hagar's encounter with God and His intimate knowledge of every soul.</div>
+            <div class="sermon-meta">
+              <span>Mar 2, 2026 &middot; Genesis 16</span>
+              <span class="sermon-watch-btn">
+                Watch
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Sermon 2 — REPLACE href -->
+        <a class="sermon-card"
+           href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch: Anchored in Truth">
+          <div class="sermon-thumb">
+            <div class="sermon-thumb-bg"></div>
+            <div class="sermon-play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </div>
+          <div class="sermon-body">
+            <div class="sermon-series">Sunday Morning</div>
+            <div class="sermon-title">Anchored in Truth</div>
+            <div class="sermon-desc">Standing firm on the authority of Scripture in a world that is always shifting.</div>
+            <div class="sermon-meta">
+              <span>Feb 23, 2026 &middot; II Timothy 3</span>
+              <span class="sermon-watch-btn">
+                Watch
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Sermon 3 — REPLACE href -->
+        <a class="sermon-card"
+           href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch: Amazing Grace">
+          <div class="sermon-thumb">
+            <div class="sermon-thumb-bg"></div>
+            <div class="sermon-play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </div>
+          <div class="sermon-body">
+            <div class="sermon-series">Sunday Morning</div>
+            <div class="sermon-title">Amazing Grace</div>
+            <div class="sermon-desc">Understanding the fullness of God's grace — what we were, and who we are in Christ.</div>
+            <div class="sermon-meta">
+              <span>Feb 16, 2026 &middot; Ephesians 2</span>
+              <span class="sermon-watch-btn">
+                Watch
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Sermon 4 — REPLACE href -->
+        <a class="sermon-card"
+           href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch: Faith That Works">
+          <div class="sermon-thumb">
+            <div class="sermon-thumb-bg"></div>
+            <div class="sermon-play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </div>
+          <div class="sermon-body">
+            <div class="sermon-series">Sunday Morning</div>
+            <div class="sermon-title">Faith That Works</div>
+            <div class="sermon-desc">The relationship between genuine saving faith and the works that naturally follow.</div>
+            <div class="sermon-meta">
+              <span>Feb 9, 2026 &middot; James 2</span>
+              <span class="sermon-watch-btn">
+                Watch
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Sermon 5 — REPLACE href -->
+        <a class="sermon-card"
+           href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch: He Is Risen">
+          <div class="sermon-thumb">
+            <div class="sermon-thumb-bg"></div>
+            <div class="sermon-play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </div>
+          <div class="sermon-body">
+            <div class="sermon-series">Sunday Morning</div>
+            <div class="sermon-title">He Is Risen</div>
+            <div class="sermon-desc">The resurrection is not just a doctrine — it is the living foundation of our hope.</div>
+            <div class="sermon-meta">
+              <span>Feb 2, 2026 &middot; Luke 24</span>
+              <span class="sermon-watch-btn">
+                Watch
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Sermon 6 — REPLACE href -->
+        <a class="sermon-card"
+           href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch: Come Unto Me">
+          <div class="sermon-thumb">
+            <div class="sermon-thumb-bg"></div>
+            <div class="sermon-play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </div>
+          <div class="sermon-body">
+            <div class="sermon-series">Sunday Morning</div>
+            <div class="sermon-title">Come Unto Me</div>
+            <div class="sermon-desc">Christ's invitation to the weary is still open. Come to Him and find rest.</div>
+            <div class="sermon-meta">
+              <span>Jan 26, 2026 &middot; Matthew 11</span>
+              <span class="sermon-watch-btn">
+                Watch
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div><!-- /sermon-grid -->
+    </div>
+  </section>
+
+  <!-- BUILDING PROJECT CARD — [CHANGE 4] no emojis -->
   <section class="building-section section-sm">
     <div class="container">
       <div class="building-card">
         <div>
-          <div class="building-badge">🏗 Building Project Update</div>
+          <div class="building-badge">Building Project Update</div>
           <h2 class="section-heading" style="font-size:clamp(22px,3vw,34px);margin-bottom:0">
             We're Building a New Home on Fairfield Drive
           </h2>
           <hr class="divider">
           <p style="font-size:var(--text-md);color:var(--color-text-secondary);line-height:var(--leading-loose);max-width:560px">
-            God has opened an exciting new chapter for Grace Bible Baptist Church. We're in the middle
-            of a building project on <strong>Fairfield Drive</strong>, and we're grateful for every
-            prayer and gift making it possible.
+            God has opened an exciting new chapter for Grace Bible Baptist Church. We're in the
+            middle of a building project on <strong>Fairfield Drive</strong>, and we're grateful
+            for every prayer and gift making it possible.
           </p>
           <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-3)">
             <em>We continue to meet at 7201 Klondike Rd (white building in the back).</em>
           </p>
         </div>
         <div style="display:flex;flex-direction:column;gap:var(--space-3);align-items:flex-start">
-          <a class="btn btn-primary" href="building-project.html">See the Full Update →</a>
+          <a class="btn btn-primary" href="building-project.html">See the Full Update &rarr;</a>
           <a class="btn btn-outline" href="https://gbbcpensacola.churchtrac.com/give"
              target="_blank" rel="noopener noreferrer">Give to the Project</a>
         </div>
@@ -330,7 +528,7 @@
     </div>
   </section>
 
-  <!-- ── GIVE STRIP ────────────────────────────────────────────────── -->
+  <!-- GIVE STRIP -->
   <section class="give-section section" aria-labelledby="give-home-heading">
     <div class="container">
       <div class="give-inner">
@@ -342,7 +540,7 @@
         <div class="give-ctas">
           <a class="btn btn-gold btn-lg"
              href="https://gbbcpensacola.churchtrac.com/give"
-             target="_blank" rel="noopener noreferrer">Give Online →</a>
+             target="_blank" rel="noopener noreferrer">Give Online &rarr;</a>
           <a class="btn btn-outline-white" href="give.html">Learn About Giving</a>
         </div>
       </div>
@@ -351,14 +549,14 @@
 
 </main>
 
-<!-- ── FOOTER ────────────────────────────────────────────────────── -->
+<!-- FOOTER — [CHANGE 4] no emojis -->
 <footer role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>Grace Bible Baptist Church</h3>
-        <p>A Bible-driven, Christ-centered church in Pensacola, FL — where lives are changed by
-           the Word of God. All are welcome.</p>
+        <p>A Bible-driven, Christ-centered church in Pensacola, FL — where lives are changed
+           by the Word of God. All are welcome.</p>
         <address class="footer-address">
           <strong>7201 Klondike Rd</strong><br>
           Pensacola, FL 32526<br>
@@ -370,16 +568,13 @@
           <a class="social-link"
              href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
              target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">f</a>
-          <a class="social-link"
-             href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
-             target="_blank" rel="noopener noreferrer" aria-label="Watch live on Facebook">▶</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
-                 target="_blank" rel="noopener noreferrer">▶ Watch Live</a></li>
+                 target="_blank" rel="noopener noreferrer">Watch Live</a></li>
           <li><a href="plan-a-visit.html">Plan a Visit</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="building-project.html">Building Project</a></li>
@@ -392,11 +587,11 @@
       <div class="footer-col">
         <h4>Worship Times</h4>
         <ul>
-          <li><a href="plan-a-visit.html">Sunday School · 9:45 AM</a></li>
-          <li><a href="plan-a-visit.html">Worship Service · 10:45 AM</a></li>
-          <li><a href="plan-a-visit.html">Wed Prayer · 6:45 PM</a></li>
+          <li><a href="plan-a-visit.html">Sunday School &middot; 9:45 AM</a></li>
+          <li><a href="plan-a-visit.html">Worship Service &middot; 10:45 AM</a></li>
+          <li><a href="plan-a-visit.html">Wed Prayer &middot; 6:45 PM</a></li>
           <li><a href="#" onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526');return false">
-            🗺 Directions</a></li>
+            Get Directions</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -418,7 +613,7 @@
   <div style="background:rgba(0,0,0,0.2)">
     <div class="container">
       <div class="footer-bottom">
-        <span>© 2026 Grace Bible Baptist Church · Pensacola, FL</span>
+        <span>&copy; 2026 Grace Bible Baptist Church &middot; Pensacola, FL</span>
         <span>Soli Deo Gloria.</span>
       </div>
     </div>

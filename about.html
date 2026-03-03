@@ -6,24 +6,26 @@
   <title>About — Grace Bible Baptist Church | Pensacola, FL</title>
   <meta name="description" content="Learn about Grace Bible Baptist Church in Pensacola, FL — our mission, beliefs, and community.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+<!-- [CHANGE 4] No emojis in announcement bar -->
 <div class="announcement-bar" role="region" aria-label="Site announcement">
-  <span class="label">🏗 Building Update</span>
+  <span class="label">Building Update</span>
   <p>We're building a new home for Grace on <strong>Fairfield Drive</strong> — exciting things ahead!</p>
-  <a class="ann-link" href="building-project.html">See the Update →</a>
+  <a class="ann-link" href="building-project.html">See the Update &rarr;</a>
 </div>
 
+<!-- [CHANGE 1] bigger logo; [CHANGE 5] Watch Live solid, Plan a Visit removed -->
 <header class="site-header" role="banner">
   <div class="header-inner">
     <a class="logo" href="index.html" aria-label="Grace Bible Baptist Church — Home">
-      <img src="assets/logo.png" alt="Grace Bible Baptist Church" width="160" height="52"
+      <img src="assets/logo.png" alt="Grace Bible Baptist Church" width="200" height="64"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <span class="logo-fallback" style="display:none">
-        <span class="logo-icon" aria-hidden="true">✝</span>
+        <span class="logo-icon" aria-hidden="true">&#10013;</span>
         <span class="logo-text">Grace Bible Baptist <small>Pensacola, FL</small></span>
       </span>
     </a>
@@ -38,11 +40,11 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <!-- [CHANGE 5] Watch Live solid; Plan a Visit button removed -->
     <div class="nav-ctas">
-      <a class="btn btn-outline btn-sm nav-cta-secondary"
+      <a class="btn btn-primary btn-sm"
          href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
-         target="_blank" rel="noopener noreferrer">▶ Watch Live</a>
-      <a class="btn btn-primary btn-sm" href="plan-a-visit.html">Plan a Visit</a>
+         target="_blank" rel="noopener noreferrer">Watch Live</a>
     </div>
     <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu"
             aria-expanded="false" onclick="toggleMobileMenu()">
@@ -61,18 +63,17 @@
     <li><a href="building-project.html">Building Project</a></li>
     <li><a href="contact.html">Contact</a></li>
     <li><a href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
-           target="_blank" rel="noopener noreferrer">Sermons (Facebook Live)</a></li>
+           target="_blank" rel="noopener noreferrer">Sermons (Facebook)</a></li>
   </ul>
   <div class="mobile-menu-ctas">
     <a class="btn btn-primary" href="plan-a-visit.html" style="justify-content:center">Plan a Visit</a>
     <a class="btn btn-outline" href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
-       target="_blank" rel="noopener noreferrer" style="justify-content:center">▶ Watch Live</a>
+       target="_blank" rel="noopener noreferrer" style="justify-content:center">Watch Live</a>
   </div>
 </div>
 
 <main id="main-content">
 
-  <!-- ── ABOUT HERO ────────────────────────────────────────────────── -->
   <div class="about-hero">
     <div class="about-hero-content">
       <span class="eyebrow" style="color:var(--color-gold-light)">Who We Are</span>
@@ -82,14 +83,17 @@
     </div>
   </div>
 
-  <!-- ── WELCOME ───────────────────────────────────────────────────── -->
+  <!-- ── WELCOME + BELIEFS ─────────────────────────────────────────
+       [CHANGE 8] Accordion moved to appear directly after the John Newton
+       quote, within this same section. The separate beliefs-section is removed.
+       [CHANGE 4] No emojis anywhere in this section.
+  ──────────────────────────────────────────────────────────────── -->
   <section class="section" style="background:var(--color-bg-white)" aria-labelledby="welcome-heading">
     <div class="container">
       <div style="max-width:760px">
         <span class="eyebrow">Welcome</span>
         <h2 id="welcome-heading" class="section-heading">You Belong Here</h2>
 
-        <!-- Verbatim welcome copy -->
         <div class="prose">
           <p>We're so glad you're here — whether you're exploring faith or growing deeper in your
              walk with God. Grace is a Bible-driven, Christ-centered church where lives are being
@@ -99,40 +103,22 @@
              your spiritual journey — you belong here.</p>
         </div>
 
+        <!-- John Newton quote -->
         <div class="pull-quote" style="margin:var(--space-10) 0">
           <p>"Amazing grace, how sweet the sound, that saved a wretch like me.
               I once was lost, but now am found; was blind, but now I see."</p>
-          <cite>— John Newton</cite>
+          <cite>&mdash; John Newton</cite>
         </div>
 
-        <div class="prose">
-          <p>Grace Bible Baptist Church is located at <strong>7201 Klondike Rd, Pensacola, FL 32526</strong>
-             — the white building in the back. We meet every Sunday and Wednesday and would love
-             to have you join us.</p>
-        </div>
-
-        <div class="flex-row mt-8">
-          <a class="btn btn-primary" href="plan-a-visit.html">Plan a Visit →</a>
-          <button class="btn-directions"
-                  onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526')">
-            🗺 Get Directions
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── MISSION & BELIEFS ─────────────────────────────────────────── -->
-  <section class="beliefs-section section" aria-labelledby="beliefs-heading">
-    <div class="container">
-      <div style="max-width:760px;margin:0 auto">
-        <span class="eyebrow">What We Believe</span>
-        <h2 id="beliefs-heading" class="section-heading">Mission &amp; Beliefs</h2>
-        <p class="section-sub" style="margin-bottom:var(--space-2)">
+        <!-- [CHANGE 8] Mission & Beliefs accordion placed DIRECTLY after quote -->
+        <span class="eyebrow" style="margin-top:var(--space-6);display:block">What We Believe</span>
+        <h2 class="section-heading" style="font-size:clamp(22px,3vw,34px)">Mission &amp; Beliefs</h2>
+        <p style="font-size:var(--text-md);color:var(--color-text-secondary);line-height:var(--leading-loose);margin-bottom:0">
           Grace Bible Baptist Church is committed to the authority of Scripture and
           the centrality of Jesus Christ in all things.
         </p>
 
+        <!-- [CHANGE 4] No emojis in accordion headings -->
         <div class="accordion" role="list">
 
           <div class="accordion-item" role="listitem">
@@ -148,7 +134,7 @@
                 We believe the Old and New Testaments to be verbally inspired by God, inerrant in
                 the original writings, and that they are of supreme and final authority in faith
                 and life.
-                <cite>II Timothy 3:16–17; II Peter 1:19–21</cite>
+                <cite>II Timothy 3:16&ndash;17; II Peter 1:19&ndash;21</cite>
               </div>
             </div>
           </div>
@@ -158,7 +144,7 @@
                     aria-expanded="false"
                     aria-controls="belief-godhead"
                     onclick="toggleAccordion(this)">
-              The Godhead — The Trinity
+              The Godhead &mdash; The Trinity
               <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
             <div class="accordion-body" id="belief-godhead" role="region">
@@ -181,8 +167,8 @@
             </button>
             <div class="accordion-body" id="belief-christ" role="region">
               <div class="accordion-body-inner">
-                <em style="color:var(--color-text-muted)">[Full statement of belief coming soon. Please
-                contact us or speak with our pastor for more information.]</em>
+                <em style="color:var(--color-text-muted)">[Full statement of belief coming soon.
+                Please contact us or speak with our pastor for more information.]</em>
               </div>
             </div>
           </div>
@@ -194,11 +180,29 @@
           <a href="contact.html" style="color:var(--color-maroon);font-weight:600">contact us</a>
           or speak with our pastor.
         </p>
+
+        <!-- Address / directions — below beliefs, still within welcome section -->
+        <hr class="divider" style="margin:var(--space-10) 0">
+
+        <div class="prose">
+          <p>Grace Bible Baptist Church is located at <strong>7201 Klondike Rd, Pensacola, FL 32526</strong>
+             &mdash; the white building in the back. We meet every Sunday and Wednesday and would love
+             to have you join us.</p>
+        </div>
+
+        <!-- [CHANGE 4] No emojis in buttons -->
+        <div class="flex-row mt-8">
+          <a class="btn btn-primary" href="plan-a-visit.html">Plan a Visit &rarr;</a>
+          <button class="btn-directions"
+                  onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526')">
+            Get Directions
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ── SERVICE TIMES ─────────────────────────────────────────────── -->
+  <!-- SERVICE TIMES — [CHANGE 4] text icon abbreviations, no emojis -->
   <section class="service-times-section section-sm" aria-labelledby="about-times-heading">
     <div class="container">
       <div class="text-center" style="max-width:600px;margin:0 auto var(--space-4)">
@@ -207,27 +211,27 @@
       </div>
       <div class="service-times-grid">
         <article class="time-card">
-          <div class="time-icon">📖</div>
+          <div class="time-icon" aria-hidden="true">SS</div>
           <h3>9:45 AM</h3><strong>Adult Sunday School</strong><p>Sundays</p>
         </article>
         <article class="time-card">
-          <div class="time-icon">🧒</div>
+          <div class="time-icon" aria-hidden="true">KS</div>
           <h3>9:45 AM</h3><strong>Children's Sunday School</strong><p>Sundays</p>
         </article>
         <article class="time-card">
-          <div class="time-icon">🎵</div>
+          <div class="time-icon" aria-hidden="true">WS</div>
           <h3>10:45 AM</h3><strong>Morning Worship Service</strong><p>Sundays</p>
         </article>
         <article class="time-card wednesday">
-          <div class="time-icon">🙏</div>
+          <div class="time-icon" aria-hidden="true">WP</div>
           <h3>6:45 PM</h3><strong>Prayer Service</strong><p>Wednesdays</p>
         </article>
       </div>
       <div class="directions-row">
-        <p>📍 <strong>7201 Klondike Rd, Pensacola FL 32526</strong> — White building in the back</p>
+        <p><strong>7201 Klondike Rd, Pensacola FL 32526</strong> &mdash; White building in the back</p>
         <button class="btn-directions"
                 onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526')">
-          🗺 Directions
+          Get Directions
         </button>
       </div>
     </div>
@@ -235,7 +239,6 @@
 
 </main>
 
-<!-- ── FOOTER ────────────────────────────────────────────────────── -->
 <footer role="contentinfo">
   <div class="container">
     <div class="footer-grid">
@@ -257,7 +260,7 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="https://www.facebook.com/share/1EXpFRQ71C/?mibextid=wwXIfr"
-                 target="_blank" rel="noopener noreferrer">▶ Watch Live</a></li>
+                 target="_blank" rel="noopener noreferrer">Watch Live</a></li>
           <li><a href="plan-a-visit.html">Plan a Visit</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="building-project.html">Building Project</a></li>
@@ -268,9 +271,9 @@
       <div class="footer-col">
         <h4>Worship Times</h4>
         <ul>
-          <li><a href="plan-a-visit.html">Sunday School · 9:45 AM</a></li>
-          <li><a href="plan-a-visit.html">Worship · 10:45 AM</a></li>
-          <li><a href="plan-a-visit.html">Wed Prayer · 6:45 PM</a></li>
+          <li><a href="plan-a-visit.html">Sunday School &middot; 9:45 AM</a></li>
+          <li><a href="plan-a-visit.html">Worship &middot; 10:45 AM</a></li>
+          <li><a href="plan-a-visit.html">Wed Prayer &middot; 6:45 PM</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -287,7 +290,7 @@
   <div style="background:rgba(0,0,0,0.2)">
     <div class="container">
       <div class="footer-bottom">
-        <span>© 2026 Grace Bible Baptist Church · Pensacola, FL</span>
+        <span>&copy; 2026 Grace Bible Baptist Church &middot; Pensacola, FL</span>
         <span>Soli Deo Gloria.</span>
       </div>
     </div>

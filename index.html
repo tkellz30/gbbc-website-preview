@@ -221,22 +221,22 @@
 
         <!-- [CHANGE 7] Clickable Google Maps embed; triggers smart OS directions on button click -->
         <div class="visit-map-wrap">
-          <!-- TASK 6: static map tile — no Google Maps SDK, no info overlay bubble -->
+          <!-- Static map — no Google Maps SDK, no overlay bubble.
+               Clicking opens smart OS directions via getDirections().
+               TO REPLACE WITH LOCAL IMAGE: save a screenshot as assets/klondike-map.jpg
+               and change the <img src> to "assets/klondike-map.jpg" -->
           <div class="visit-map-embed visit-map-static">
-            <button class="visit-map-clickable"
-                    onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526')"
-                    aria-label="Tap to get directions to 7201 Klondike Rd, Pensacola FL">
+            <a class="map-click"
+               href="javascript:getDirections('7201 Klondike Rd, Pensacola, FL 32526')"
+               aria-label="Get directions to 7201 Klondike Rd, Pensacola FL">
+              <!-- Primary: OpenStreetMap static tile — free, no API key, no bubbles -->
               <img
-                src="https://maps.geoapify.com/v1/staticmap?style=osm-bright-smooth&width=640&height=360&center=lonlat:-87.3645,30.4554&zoom=15&marker=lonlat:-87.3645,30.4554;color:%237d2027;size:medium&apiKey=irrelevant"
-                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-                alt="Map of 7201 Klondike Rd, Pensacola FL"
+                src="https://staticmap.openstreetmap.de/staticmap.php?center=30.4554,-87.3645&zoom=15&size=640x360&markers=30.4554,-87.3645,red-pushpin"
+                onerror="this.src='assets/klondike-map.jpg';this.onerror=null"
+                alt="Map showing 7201 Klondike Rd, Pensacola FL 32526"
                 width="640" height="360">
-              <span class="visit-map-no-img" style="display:none" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                <strong>7201 Klondike Rd<br>Pensacola, FL 32526</strong>
-              </span>
-              <span class="visit-map-hint" aria-hidden="true">Tap for directions</span>
-            </button>
+              <span class="visit-map-hint" aria-hidden="true">Get Directions</span>
+            </a>
           </div>
           <div class="visit-map-footer">
             <div class="visit-map-address">

@@ -182,25 +182,21 @@
       </div>
       <div class="service-times-grid">
         <article class="time-card">
-          <div class="time-icon" aria-hidden="true">SS</div>
           <h3>9:45 AM</h3>
           <strong>Adult Sunday School</strong>
           <p>Sundays — Deeper study of God's Word alongside fellow believers.</p>
         </article>
         <article class="time-card">
-          <div class="time-icon" aria-hidden="true">KS</div>
           <h3>9:45 AM</h3>
           <strong>Children's Sunday School</strong>
           <p>Sundays — Fun, age-appropriate Bible lessons for children.</p>
         </article>
         <article class="time-card">
-          <div class="time-icon" aria-hidden="true">WS</div>
           <h3>10:45 AM</h3>
           <strong>Morning Worship Service</strong>
           <p>Sundays — Praise, prayer, and the preaching of God's Word.</p>
         </article>
         <article class="time-card wednesday">
-          <div class="time-icon" aria-hidden="true">WP</div>
           <h3>6:45 PM</h3>
           <strong>Prayer Service</strong>
           <p>Wednesdays — Come pray and study Scripture together mid-week.</p>
@@ -225,14 +221,22 @@
 
         <!-- [CHANGE 7] Clickable Google Maps embed; triggers smart OS directions on button click -->
         <div class="visit-map-wrap">
-          <div class="visit-map-embed">
-            <iframe
-              src="https://maps.google.com/maps?q=7201+Klondike+Rd,+Pensacola,+FL+32526&output=embed&z=15"
-              title="Map of 7201 Klondike Rd, Pensacola FL 32526"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              aria-label="Interactive map showing our location at 7201 Klondike Rd, Pensacola"></iframe>
+          <!-- TASK 6: static map tile — no Google Maps SDK, no info overlay bubble -->
+          <div class="visit-map-embed visit-map-static">
+            <button class="visit-map-clickable"
+                    onclick="getDirections('7201 Klondike Rd, Pensacola, FL 32526')"
+                    aria-label="Tap to get directions to 7201 Klondike Rd, Pensacola FL">
+              <img
+                src="https://maps.geoapify.com/v1/staticmap?style=osm-bright-smooth&width=640&height=360&center=lonlat:-87.3645,30.4554&zoom=15&marker=lonlat:-87.3645,30.4554;color:%237d2027;size:medium&apiKey=irrelevant"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                alt="Map of 7201 Klondike Rd, Pensacola FL"
+                width="640" height="360">
+              <span class="visit-map-no-img" style="display:none" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                <strong>7201 Klondike Rd<br>Pensacola, FL 32526</strong>
+              </span>
+              <span class="visit-map-hint" aria-hidden="true">Tap for directions</span>
+            </button>
           </div>
           <div class="visit-map-footer">
             <div class="visit-map-address">
@@ -577,4 +581,12 @@
   <div style="background:rgba(0,0,0,0.2)">
     <div class="container">
       <div class="footer-bottom">
-        <span>&copy; 2026 Grace Bible Baptist Church &middot; Pensacola, FL
+        <span>&copy; 2026 Grace Bible Baptist Church &middot; Pensacola, FL</span>
+        <span>Soli Deo Gloria.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>

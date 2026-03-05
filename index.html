@@ -229,10 +229,12 @@
             <a class="map-click"
                href="javascript:getDirections('7201 Klondike Rd, Pensacola, FL 32526')"
                aria-label="Get directions to 7201 Klondike Rd, Pensacola FL">
-              <!-- Primary: OpenStreetMap static tile — free, no API key, no bubbles -->
+              <!-- MAP IMAGE: Place a screenshot of the map at assets/klondike-map.jpg
+                   (e.g. a Google Maps screenshot of 7201 Klondike Rd at ~z15).
+                   If the file is missing the CSS fallback shows a pin + address. -->
               <img
-                src="https://staticmap.openstreetmap.de/staticmap.php?center=30.4554,-87.3645&zoom=15&size=640x360&markers=30.4554,-87.3645,red-pushpin"
-                onerror="this.src='assets/klondike-map.jpg';this.onerror=null"
+                src="assets/klondike-map.jpg"
+                onerror="this.classList.add('map-img-missing');this.onerror=null"
                 alt="Map showing 7201 Klondike Rd, Pensacola FL 32526"
                 width="640" height="360">
               <span class="visit-map-hint" aria-hidden="true">Get Directions</span>

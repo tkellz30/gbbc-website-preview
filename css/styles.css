@@ -370,18 +370,18 @@ footer{background:var(--color-bg-dark);color:rgba(255,255,255,0.6);padding:clamp
 .video-embed{
   position:relative;
   width:100%;
-  padding-top:75%; /* taller box — shows more of portrait FB video, face more visible */
+  padding-top:90%; /* tall box — exposes more of portrait video frame so person is visible */
   overflow:hidden;
   background:var(--color-bg-dark);
   flex-shrink:0}
-/* Shift iframe anchor upward so the face area (upper-mid of portrait) fills frame */
+/* Anchor iframe at top-center so face/upper body fills the visible area */
 .video-embed iframe{
   position:absolute;
-  top:40%;
+  top:0;
   left:50%;
   width:100% !important;
   height:100% !important;
-  transform:translate(-50%,-40%);
+  transform:translateX(-50%);
   border:none !important;
   display:block}
 
@@ -399,13 +399,19 @@ footer{background:var(--color-bg-dark);color:rgba(255,255,255,0.6);padding:clamp
   object-fit:cover;display:block;
   transition:filter var(--transition,0.2s)}
 .map-click:hover img{filter:brightness(0.88)}
-.visit-map-no-img{display:none!important;
-  width:100%;height:clamp(220px,30vw,360px);
-  flex-direction:column;align-items:center;justify-content:center;
-  gap:var(--space-3,12px);
-  background:var(--color-bg,#f8f5f0);
-  color:var(--color-text,#1a1a1a);
-  font-size:var(--text-sm,0.9rem);text-align:center}
+/* Fallback: image missing — neutral map-like background + pin icon */
+.map-click img.map-img-missing{
+  background:#e8ead8; /* muted topographic green */
+  height:clamp(220px,30vw,360px);
+  object-fit:none; /* suppress broken-image icon */
+  color:transparent} /* hide alt text */
+.map-click:has(img.map-img-missing)::before{
+  content:'';
+  position:absolute;inset:0;
+  background:#e8ead8
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237d2027'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z'/%3E%3Ccircle cx='12' cy='9' r='2.5' fill='%23fff'/%3E%3C/svg%3E")
+    center/60px no-repeat;
+  z-index:1}
 
 .visit-map-hint{
   position:absolute;bottom:10px;left:50%;

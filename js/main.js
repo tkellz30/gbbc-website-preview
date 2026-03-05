@@ -125,3 +125,64 @@ document.addEventListener('click', function (e) {
     btn.setAttribute('aria-expanded', 'false');
   }
 });
+
+/* -----------------------------------------------------------------
+   5. SERMON FEED LOADER
+   Fetches the Cloudflare Worker feed and injects the latest 6
+   Facebook video iframes into the existing sermon card slots.
+   Fails gracefully — if the fetch fails, existing placeholders
+   remain exactly as-is.
+   ----------------------------------------------------------------- */
+(function () {
+  var FEED_URL = 'https://gbbc-sermons-feed.tkellz30.workers.dev/sermons.json';
+
+  function loadSermonsFromFeed() {
+    var grid = document.querySelector('[data-sermons-grid]');
+    if (!grid) return; // not on home page
+
+    var slots = grid.querySelectorAll('[data-sermon-video]');
+    if (!slots.length) return;
+
+    fetch(FEED_URL)
+      .then(function (res) {
+        if (!res.ok) throw new Error('Feed responded ' + res.status);
+        return res.json();
+      })
+      .then(function (data) {
+        var items = (data && Array.isArray(data.items)) ? data.items : [];
+        // Take the first 6 (feed should already be newest-first)
+        var latest = items.slice(0, 6);
+
+        latest.forEach(function (item, i) {
+          if (!slots[i]) return;
+          if (!item.permalink_url) return;
+
+          var encoded = encodeURIComponent(item.permalink_url);
+          var src = 'https://www.facebook.com/plugins/video.php'
+                  + '?href=' + encoded
+                  + '&show_text=false&width=560&t=0';
+
+          // Replace only the iframe inside the video-embed wrapper
+          slots[i].innerHTML =
+            '<iframe'
+            + ' src="' + src + '"'
+            + ' scrolling="no"'
+            + ' frameborder="0"'
+            + ' allowfullscreen="true"'
+            + ' allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"'
+            + ' title="Sermon video ' + (i + 1) + '"'
+            + '></iframe>';
+        });
+      })
+      .catch(function (err) {
+        // Silent failure — existing hardcoded iframes stay in place
+        console.warn('Sermon feed could not be loaded:', err);
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadSermonsFromFeed);
+  } else {
+    loadSermonsFromFeed(); // already parsed
+  }
+}());

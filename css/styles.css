@@ -361,3 +361,23 @@ footer{background:var(--color-bg-dark);color:rgba(255,255,255,0.6);padding:clamp
 .footer-col ul li a{font-size:var(--text-sm);color:rgba(255,255,255,0.5);text-decoration:none;transition:color var(--transition)}
 .footer-col ul li a:hover{color:#fff}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding:var(--space-6) 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-4);font-size:var(--text-xs);color:rgba(255,255,255,0.3)}
+
+/* =================================================================
+   VIDEO EMBED — responsive Facebook iframe wrapper
+   Aspect ratio: 267 x 476 (portrait). padding-top = 476/267*100%.
+   The iframe's inline width/height attrs are overridden by CSS.
+   ================================================================= */
+.video-embed{
+  position:relative;
+  width:100%;
+  padding-top:178.3%; /* 476/267 */
+  overflow:hidden;
+  background:var(--color-bg-dark);
+  flex-shrink:0}
+.video-embed iframe{
+  position:absolute;
+  inset:0;
+  width:100% !important;
+  height:100% !important;
+  border:none !important;
+  display:block}

@@ -370,17 +370,18 @@ footer{background:var(--color-bg-dark);color:rgba(255,255,255,0.6);padding:clamp
 .video-embed{
   position:relative;
   width:100%;
-  padding-top:56.25%; /* 16:9 */
+  padding-top:75%; /* taller box — shows more of portrait FB video, face more visible */
   overflow:hidden;
   background:var(--color-bg-dark);
   flex-shrink:0}
+/* Shift iframe anchor upward so the face area (upper-mid of portrait) fills frame */
 .video-embed iframe{
   position:absolute;
-  top:50%;
+  top:40%;
   left:50%;
-  width:110% !important;
-  height:110% !important;
-  transform:translate(-50%,-50%);
+  width:100% !important;
+  height:100% !important;
+  transform:translate(-50%,-40%);
   border:none !important;
   display:block}
 
@@ -389,23 +390,23 @@ footer{background:var(--color-bg-dark);color:rgba(255,255,255,0.6);padding:clamp
 
 /* Task 6: Static map button — no Google Maps SDK overlay */
 .visit-map-static{overflow:hidden}
-.visit-map-clickable{
-  display:block;width:100%;padding:0;background:none;
-  border:none;cursor:pointer;position:relative;
-  text-align:left}
-.visit-map-clickable img{
+/* map-click: <a> wrapper around static map image */
+.map-click{
+  display:block;position:relative;overflow:hidden;
+  text-decoration:none;cursor:pointer}
+.map-click img{
   width:100%;height:clamp(220px,30vw,360px);
   object-fit:cover;display:block;
   transition:filter var(--transition,0.2s)}
-.visit-map-clickable:hover img{filter:brightness(0.88)}
-.visit-map-no-img{
+.map-click:hover img{filter:brightness(0.88)}
+.visit-map-no-img{display:none!important;
   width:100%;height:clamp(220px,30vw,360px);
   flex-direction:column;align-items:center;justify-content:center;
   gap:var(--space-3,12px);
   background:var(--color-bg,#f8f5f0);
   color:var(--color-text,#1a1a1a);
   font-size:var(--text-sm,0.9rem);text-align:center}
-.visit-map-no-img svg{color:var(--color-maroon,#7d2027)}
+
 .visit-map-hint{
   position:absolute;bottom:10px;left:50%;
   transform:translateX(-50%);
@@ -415,4 +416,4 @@ footer{background:var(--color-bg-dark);color:rgba(255,255,255,0.6);padding:clamp
   border-radius:100px;pointer-events:none;
   white-space:nowrap;
   opacity:0;transition:opacity var(--transition,0.2s)}
-.visit-map-clickable:hover .visit-map-hint{opacity:1}
+.map-click:hover .visit-map-hint{opacity:1}

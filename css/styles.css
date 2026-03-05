@@ -370,7 +370,7 @@ footer{background:var(--color-bg-dark);color:rgba(255,255,255,0.6);padding:clamp
 .video-embed{
   position:relative;
   width:100%;
-  padding-top:178.3%; /* 476/267 */
+  padding-top:56.25%; /* 16:9 */
   overflow:hidden;
   background:var(--color-bg-dark);
   flex-shrink:0}

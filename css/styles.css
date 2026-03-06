@@ -436,3 +436,26 @@ footer{background:var(--color-bg-dark);color:rgba(255,255,255,0.6);padding:clamp
   white-space:nowrap;
   opacity:0;transition:opacity var(--transition,0.2s)}
 .map-click:hover .visit-map-hint{opacity:1}
+
+
+
+/* --- FIX: ensure map image shows above fallback pin overlay --- */
+.map-click {
+  position: relative;
+  overflow: hidden;
+}
+
+.map-click img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 2; /* ABOVE fallback overlay */
+}
+
+/* fallback overlay (pin/green) stays behind the image */
+.map-click::after {
+  z-index: 1;
+}

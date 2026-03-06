@@ -390,33 +390,30 @@ footer{background:var(--color-bg-dark);color:rgba(255,255,255,0.6);padding:clamp
 
 /* Static map preview — no Google Maps iframe, no info bubble */
 .visit-map-static{overflow:hidden}
-/* .map-click: <a> that wraps the static map image */
+/* .map-click: <a> that wraps the static map image.
+   img (z-index:2) always sits above the fallback pin layer (z-index:1). */
 .map-click{
   display:block;
   position:relative;
   overflow:hidden;
   text-decoration:none;
   cursor:pointer;
-  /* Always reserve the correct height even if the image hasn't loaded yet */
   height:clamp(220px,30vw,360px);
-  background:#e8ead8}          /* map-green shows during load */
+  background:#e8ead8; /* map-green — visible while image loads */
+}
 .map-click img{
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
   object-fit:cover;
+  object-position:center;
   display:block;
-  transition:filter var(--transition,0.2s)}
+  z-index:2; /* always on top — never hidden */
+  transition:filter var(--transition,0.2s);
+}
 .map-click:hover img{filter:brightness(0.88)}
-
-/* Last-resort fallback: img couldn't load at all.
-   Shows a clean topographic-green background with a centred pin.
-   Works in all browsers — no :has() needed. */
-.map-click img.map-img-missing{
-  opacity:0}          /* hide broken-image icon */
-/* The ::after pseudo-element on .map-click always sits behind the img.
-   When img is hidden (opacity:0) the pin shows through. */
+/* Fallback pin layer — only shows if image completely fails to load */
 .map-click::after{
   content:'';
   position:absolute;
@@ -424,8 +421,8 @@ footer{background:var(--color-bg-dark);color:rgba(255,255,255,0.6);padding:clamp
   background:#e8ead8
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%237d2027' d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z'/%3E%3Ccircle cx='12' cy='9' r='2.5' fill='%23fff'/%3E%3C/svg%3E")
     center/56px 56px no-repeat;
-  z-index:0}          /* img (z-index auto) naturally stacks above ::after */
-
+  z-index:1;
+}
 .visit-map-hint{
   position:absolute;bottom:10px;left:50%;
   transform:translateX(-50%);
@@ -434,28 +431,6 @@ footer{background:var(--color-bg-dark);color:rgba(255,255,255,0.6);padding:clamp
   text-transform:uppercase;padding:5px 14px;
   border-radius:100px;pointer-events:none;
   white-space:nowrap;
+  z-index:3; /* above image */
   opacity:0;transition:opacity var(--transition,0.2s)}
 .map-click:hover .visit-map-hint{opacity:1}
-
-
-
-/* --- FIX: ensure map image shows above fallback pin overlay --- */
-.map-click {
-  position: relative;
-  overflow: hidden;
-}
-
-.map-click img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 2; /* ABOVE fallback overlay */
-}
-
-/* fallback overlay (pin/green) stays behind the image */
-.map-click::after {
-  z-index: 1;
-}

@@ -224,19 +224,19 @@
           <!-- Static map — no Google Maps SDK, no overlay bubble.
                Clicking opens smart OS directions via getDirections().
                TO REPLACE WITH LOCAL IMAGE: save a screenshot as assets/klondike-map.png
-               and change the <img src> to "assets/klondike-map.jpg" -->
+               and change the <img src> to "assets/klondike-map.png" -->
           <div class="visit-map-embed visit-map-static">
             <a class="map-click"
                href="javascript:getDirections('7201 Klondike Rd, Pensacola, FL 32526')"
                aria-label="Get directions to 7201 Klondike Rd, Pensacola FL">
               <!-- MAP IMAGE:
-                   • BEST: add your own screenshot at assets/klondike-map.jpg (z15, ~640×360)
+                   • BEST: add your own screenshot at assets/klondike-map.png (z15, ~640×360)
                      and it will be used automatically.
                    • AUTOMATIC FALLBACK: if that file is missing, a free OSM static tile
                      loads instead — still no bubble, no iframe, fully clickable.
                    • LAST RESORT: if both fail, CSS shows a clean map-colored background + pin. -->
               <img
-                src="assets/klondike-map.jpg"
+                src="assets/klondike-map.png"
                 onerror="this.src='https://staticmap.openstreetmap.de/staticmap.php?center=30.4554,-87.3645&zoom=15&size=640x360&markers=30.4554,-87.3645,red-pushpin';this.onerror=function(){this.classList.add('map-img-missing');this.onerror=null;}"
                 alt="Map showing 7201 Klondike Rd, Pensacola FL 32526"
                 width="640" height="360">

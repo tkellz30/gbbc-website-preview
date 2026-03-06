@@ -9,36 +9,36 @@
 
 /* -----------------------------------------------------------------
    1. HERO SLIDESHOW
-   TASK 1 FIX: The root cause was a missing <script> tag in the
-   truncated index.html (JS never loaded at all). Fixed by:
-     a) Restoring the <script src="js/main.js" defer> tag in HTML.
-     b) Wrapping the IIFE body in DOMContentLoaded so the slide
-        elements are guaranteed present even if script ever moves.
-     c) Hard-resetting all slides before starting so there is
-        never ambiguous multi-active state.
+   Mobile-robust: works on iOS Safari, Android Chrome/Firefox,
+   Samsung Internet, and all desktop browsers.
+   - start()/stop() helpers prevent duplicate intervals.
+   - Hover-pause only on true pointer devices (not touch-only).
+   - Restarts on visibilitychange, pageshow (bfcache), and a
+     one-time pointerdown/touchstart "kick" for mobile.
+   - Respects prefers-reduced-motion.
    ----------------------------------------------------------------- */
 (function () {
   function initSlideshow() {
     var container = document.getElementById('hero-slideshow');
     if (!container) return;
 
-    var prefersReduced = window.matchMedia &&
-                         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) return;
+    /* Respect reduced-motion: keep slide 1 visible, no interval */
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     var slides      = container.querySelectorAll('.hero-slide');
     var dotsWrap    = document.getElementById('slideshow-dots');
     var total       = slides.length;
     var current     = 0;
     var INTERVAL_MS = 5000;
+    var timer       = null;  /* single source of truth for the interval */
 
     if (!total) return;
 
-    /* Hard-reset: strip active from all, ensure slide 0 is active */
+    /* ── Hard-reset: one active slide, no ambiguous state ── */
     slides.forEach(function (s) { s.classList.remove('active'); });
     slides[0].classList.add('active');
 
-    /* Rebuild dots fresh (guard against duplicate init) */
+    /* ── Build dot buttons ── */
     if (dotsWrap) dotsWrap.innerHTML = '';
     slides.forEach(function (_, i) {
       var dot = document.createElement('button');
@@ -61,14 +61,65 @@
       if (dots[current]) dots[current].classList.add('active');
     }
 
-    var timer = setInterval(function () { goTo(current + 1); }, INTERVAL_MS);
+    /* ── Timer helpers: only one interval ever runs ── */
+    function stop() {
+      if (timer !== null) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
 
-    container.addEventListener('mouseenter', function () { clearInterval(timer); });
-    container.addEventListener('mouseleave', function () {
+    function start() {
+      stop(); /* clear any existing before creating a new one */
       timer = setInterval(function () { goTo(current + 1); }, INTERVAL_MS);
+    }
+
+    /* ── Start the slideshow ── */
+    start();
+
+    /* ── Hover-pause for real pointer devices (desktop/laptop).
+          window.matchMedia('(hover: hover)') is false on pure
+          touch screens so mobile never gets stuck in a paused state. ── */
+    if (window.matchMedia && window.matchMedia('(hover: hover)').matches) {
+      container.addEventListener('mouseenter', stop);
+      container.addEventListener('mouseleave', start);
+    }
+
+    /* ── Lifecycle: restart when user returns to the page.
+          Covers: tab switch, app switch, iOS bfcache restore. ── */
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'visible') {
+        start();
+      } else {
+        stop();
+      }
     });
+
+    /* pageshow fires on initial load AND on bfcache restore (iOS Safari).
+       persisted=true means it was served from bfcache. */
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted) start();
+    });
+
+    /* pagehide: stop timer cleanly so it doesn't run in background */
+    window.addEventListener('pagehide', stop);
+
+    /* ── One-time touch/pointer "kick" for mobile browsers.
+          Some mobile browsers defer repaints until user interaction.
+          A single pointerdown (covers touch + mouse + stylus) forces
+          the browser to resume the rendering loop. Passive so it
+          never blocks scroll or tap. ── */
+    function oneTimeKick() {
+      start();
+      window.removeEventListener('pointerdown', oneTimeKick);
+      window.removeEventListener('touchstart',  oneTimeKick);
+    }
+    window.addEventListener('pointerdown', oneTimeKick, { passive: true });
+    /* touchstart fallback for very old browsers that lack PointerEvent */
+    window.addEventListener('touchstart',  oneTimeKick, { passive: true });
   }
 
+  /* Run after DOM is fully parsed */
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initSlideshow);
   } else {
